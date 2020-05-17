@@ -32,7 +32,7 @@ When booting the game through an emulator, the first ROM ask you to enter a 6 nu
 ## Disclaimer
 I'm not a programmer or reverse engineer. I'm probably going to write something wrong or not understand concept well, nonetheless this is how I did it and understand the challenge.
 
-Also, I'm taking in consideration you have basic knowledge of Linux, Linux compilation, Git, Ghidra, hexadecimal... I will not provide all the commands I used, but explain the process I went through. If you are stuck, email me and I can help you further.
+Also, I'm taking in consideration you have basic knowledge of Linux, Linux compilation, Git, Ghidra, hexadecimal... I'm not providing step procedure for everything, some things you should be able to figure out yourself. If you are stuck, email me and I can help you further.
 
 ## Emulator Setup
 The challenge provide you a link to the emulator Reicast (https://reicast.com/). You need to Git clone the repository on your machine (did on Ubuntu 18.04), make sure you have all the dependencies specified in the README.md and make the software.
