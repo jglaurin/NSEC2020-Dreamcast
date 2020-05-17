@@ -11,6 +11,8 @@ Write-up author: Joniel Gagné-Laurin (Wizard Hacker) - joniel {[(@)]} gagnelaur
 -   dc_rom_r0.elf_orig -> Original ELF ROM0 executable provided by the challenge
 -   dc_rom_r1.elf_orig -> Original ELF ROM1 executable provided by the challenge
 
+-   dc_rom_r0.elf_mod -> Modified ELF to remove the code verification.
+-   dc_rom_r1.elf_mod -> Modified ELF to remove the code verification.
 -   dc_rom_r0n.cdi -> First successful modification of ROM0 with the "Intrusion Detection" message changed to "Wizard Hacker here"
 -   dc_rom_r0n2.cdi -> Successful attempt at disabling the code verification of ROM0. Code 000000 provide the flag.
 -   dc_rom_r1.cdi -> Successful attempt at disabling the code verification of ROM1. Code 00000 provide the flag.
