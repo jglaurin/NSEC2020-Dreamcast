@@ -1,7 +1,10 @@
 # WIP --- Write-up "Dreamcast Japanese Imports" Challenge
 This challenge was presented on NSec 2020 and constitute a reverse enginnering challenge of two Dreamcast ROMs.
+
 Challenge author: vincelasal
+
 Write-up author: Joniel Gagné-Laurin (Wizard Hacker) - joniel {[(@)]} gagnelaurin {[(.)]} net
+
 ## Challenge
 Riku, the new girl in grade 10 got her hands on some weird Japanese import games for the Dreamcast.
 The games want some sort of code, I can’t figure out how to beat them. Could you help me?
@@ -59,12 +62,19 @@ Repeat this whole process for the second ROM. At the end, you should have two CD
 
 ## Links
 https://dreamcast-talk.com/forum/viewtopic.php?f=52&t=8045&sid=158d552fb143100e581ae4fd70bd1ac7
-https://dreamcast.wiki/Creating_a_bootable_Dreamcast_disc
-https://github.com/reicast/reicast-emulator
-https://replayers.org/bios-files/
-https://dreamcast.wiki/Building_KOS_on_Linux_mint_(or_Ubuntu)
-https://dcemulation.org/index.php?title=Compiling_KOS_on_Linux
-http://gamedev.allusion.net/softprj/kos/
-https://github.com/arthabus/DreamcastCdiTool
-https://dcemulation.org/index.php?title=BootDream
 
+https://dreamcast.wiki/Creating_a_bootable_Dreamcast_disc
+
+https://github.com/reicast/reicast-emulator
+
+https://replayers.org/bios-files/
+
+https://dreamcast.wiki/Building_KOS_on_Linux_mint_(or_Ubuntu)
+
+https://dcemulation.org/index.php?title=Compiling_KOS_on_Linux
+
+http://gamedev.allusion.net/softprj/kos/
+
+https://github.com/arthabus/DreamcastCdiTool
+
+https://dcemulation.org/index.php?title=BootDream
