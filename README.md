@@ -5,6 +5,16 @@ Challenge author: vincelasal
 
 Write-up author: Joniel Gagné-Laurin (Wizard Hacker) - joniel {[(@)]} gagnelaurin {[(.)]} net
 
+## File list
+-   dc_rom_r0.cdi -> Original CDI ROM0 image provided by the challenge
+-   dc_rom_r1.cdi -> Original CDI ROM1 image provided by the challenge
+-   dc_rom_r0.elf_orig -> Original ELF ROM0 executable provided by the challenge
+-   dc_rom_r1.elf_orig -> Original ELF ROM1 executable provided by the challenge
+
+-   dc_rom_r0n.cdi -> First successful modification of ROM0 with the "Intrusion Detection" message changed to "Wizard Hacker here"
+-   dc_rom_r0n2.cdi -> Successful attempt at disabling the code verification of ROM0. Code 000000 provide the flag.
+-   dc_rom_r1.cdi -> Successful attempt at disabling the code verification of ROM1. Code 00000 provide the flag.
+
 ## Challenge
 Riku, the new girl in grade 10 got her hands on some weird Japanese import games for the Dreamcast.
 The games want some sort of code, I can’t figure out how to beat them. Could you help me?
