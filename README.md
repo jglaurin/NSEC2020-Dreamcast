@@ -63,7 +63,11 @@ My favorite hex editor is "hexeditor" or the package ncurses-hexedit on Ubuntu, 
 
 For "dc_rom_r0.elf", we start at location "0x8c010686" in Ghidra or "0x706" in hexeditor. In the original file, the instruction is "01 88", but we need to change it to "00 30" so it compare r0 to r0. Once completed, let's move to "0x8c0106a4" or "0x724" to replace the jump instruction for a NOP. This means changing "f1 89" to "09 00". Repeat the same for "0x8c0106aa", "0x8c0106b2", "0x8c0106ba" and "0x8c0106c0" so the instructions are all NOP.
 
+<img src="https://github.com/jglaurin/NSEC2020-Dreamcast/raw/master/images/modification_r0.png">
+
 For "dc_rom_r1.elf", we start at location "0x8c010726" in Ghidra or "0x7a6" in hexeditor. In the original file, the instruction is "04 88", but we need to change it to "00 30" so it compare r0 to r0. Once completed, let's move to "0x8c010748" or "0x7c8" to replace the jump instruction for a NOP. This means changing "ef 8b" to "09 00" Repeat the same for "0x8c10750" and "0x8c10760 so the instructions are all NOP.
+
+<img src="https://github.com/jglaurin/NSEC2020-Dreamcast/raw/master/images/modification_r1.png">
 
 ## Dreamcast Development Environment Setup
 Now that the executables has been changed, we need to setup the environment to adapt the ELF to play on the Dreamcast. Some steps might be superfluous, but it worked when I executed all of them. For this, let's use the KallistiOS environment. Follow this guide https://dcemulation.org/index.php?title=Compiling_KOS_on_Linux, but you don't need to do the "KOS-Ports" section. On my setup, I didn't used the automatic script, I went through the manual process.
