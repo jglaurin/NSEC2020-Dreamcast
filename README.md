@@ -1,31 +1,31 @@
-# WIP --- Write-up "Dreamcast Japanese Imports" Challenge
-This challenge was presented on NSec 2020 and constitute a reverse enginnering challenge of two Dreamcast ROMs.
+# Write-up "Dreamcast Japanese Imports" NSec 2020 Challenge
+This challenge was presented during NSec 2020 and constitute a reverse enginnering challenge of two Dreamcast ROMs.
 
-Challenge author: vincelasal
+Challenge author: vincelasal (Thx for the great challenge, was fun to go through!)
 
 Write-up author: Joniel Gagné-Laurin (Wizard Hacker) - joniel {[(@)]} gagnelaurin {[(.)]} net
 
 ## File list
--   dc_rom_r0.cdi -> Original CDI ROM0 image provided by the challenge
--   dc_rom_r1.cdi -> Original CDI ROM1 image provided by the challenge
--   dc_rom_r0.elf_orig -> Original ELF ROM0 executable provided by the challenge
--   dc_rom_r1.elf_orig -> Original ELF ROM1 executable provided by the challenge
+-   [dc_rom_r0.cdi](https://github.com/jglaurin/NSEC2020-Dreamcast/raw/master/dc_rom_r0.cdi) -> Original CDI ROM0 image provided by the challenge
+-   [dc_rom_r1.cdi](https://github.com/jglaurin/NSEC2020-Dreamcast/raw/master/dc_rom_r1.cdi) -> Original CDI ROM1 image provided by the challenge
+-   [dc_rom_r0.elf_orig](https://github.com/jglaurin/NSEC2020-Dreamcast/raw/master/dc_rom_r0.elf_orig) -> Original ELF ROM0 executable provided by the challenge
+-   [dc_rom_r1.elf_orig](https://github.com/jglaurin/NSEC2020-Dreamcast/raw/master/dc_rom_r1.elf_orig) -> Original ELF ROM1 executable provided by the challenge
 
--   dc_rom_r0.elf_mod -> Modified ELF ROM0 to remove the code verification.
--   dc_rom_r1.elf_mod -> Modified ELF ROM1 to remove the code verification.
--   dc_rom_r0n.cdi -> First successful modification of ROM0 with the "Intrusion Detection" message changed to "Wizard Hacker here"
--   dc_rom_r0n2.cdi -> Successful attempt at disabling the code verification of ROM0. Code 000000 provide the flag.
--   dc_rom_r1.cdi -> Successful attempt at disabling the code verification of ROM1. Code 00000 provide the flag.
+-   [dc_rom_r0.elf_mod](https://github.com/jglaurin/NSEC2020-Dreamcast/raw/master/dc_rom_r0.elf_mod) -> Modified ELF ROM0 to remove the code verification.
+-   [dc_rom_r1.elf_mod](https://github.com/jglaurin/NSEC2020-Dreamcast/raw/master/dc_rom_r1.elf_mod) -> Modified ELF ROM1 to remove the code verification.
+-   [dc_rom_r0n.cdi](https://github.com/jglaurin/NSEC2020-Dreamcast/raw/master/dc_rom_r0n.cdi) -> First successful modification of ROM0 with the "Intrusion Detection" message changed to "Wizard Hacker here"
+-   [dc_rom_r0n2.cdi](https://github.com/jglaurin/NSEC2020-Dreamcast/raw/master/dc_rom_r0n2.cdi) -> Successful attempt at disabling the code verification of ROM0. Code 000000 provide the flag.
+-   [dc_rom_r1n.cdi](https://github.com/jglaurin/NSEC2020-Dreamcast/raw/master/dc_rom_r1n.cdi) -> Successful attempt at disabling the code verification of ROM1. Code 00000 provide the flag.
 
 ## Challenge
 Riku, the new girl in grade 10 got her hands on some weird Japanese import games for the Dreamcast.
 The games want some sort of code, I can’t figure out how to beat them. Could you help me?
 If you don’t have a Dreamcast handy, I recommend you play them with [this 4](https://reicast.com/).
--   rom 0
--   rom 0
--   rom 1
--   rom 1
--   [light reading 3](https://www.st.com/content/ccc/resource/technical/document/user_manual/69/23/ed/be/9b/ed/44/da/CD00147165.pdf/files/CD00147165.pdf/jcr:content/translations/en.CD00147165.pdf)
+-   [rom 0](https://github.com/jglaurin/NSEC2020-Dreamcast/raw/master/dc_rom_r0.elf_orig)
+-   [rom 0](https://github.com/jglaurin/NSEC2020-Dreamcast/raw/master/dc_rom_r0.cdi)
+-   [rom 1](https://github.com/jglaurin/NSEC2020-Dreamcast/raw/master/dc_rom_r1.elf_orig)
+-   [rom 1](https://github.com/jglaurin/NSEC2020-Dreamcast/raw/master/dc_rom_r1.cdi)
+-   [light reading 3](https://github.com/jglaurin/NSEC2020-Dreamcast/raw/master/en.CD00147165.pdf)
 ## Introduction
 The challenge provide you with 5 files: two .CDI files, two .ELF files and a .PDF. This last file is the instruction documentation for the processor used in the Sega Dreamcast console. The two ELF files are the executables of the game with debug features enabled. The two CDI files are the actual CD images that can be used to play the game.
 
@@ -36,7 +36,7 @@ When booting the game through an emulator, the first ROM ask you to enter a 6 nu
 ## Disclaimer
 I'm not a programmer or reverse engineer. I'm probably going to write something wrong or not understand concept well, nonetheless this is how I did it and understand the challenge.
 
-Also, I'm taking in consideration you have basic knowledge of Linux, Linux compilation, Git, Ghidra, hexadecimal... I'm not providing step procedure for everything, some things you should be able to figure out yourself. If you are stuck, email me and I can help you further.
+Also, I'm taking in consideration you have basic knowledge of Linux, Linux compilation, Git, Ghidra, hexadecimal... I'm not providing step procedure for everything, some things you should be able to figure out yourself.
 
 ## Emulator Setup
 The challenge provide you a link to the emulator Reicast (https://reicast.com/). You need to Git clone the repository on your machine (did on Ubuntu 18.04), make sure you have all the dependencies specified in the README.md and make the software.
