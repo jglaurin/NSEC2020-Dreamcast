@@ -45,7 +45,7 @@ Before you can start a game, you need to retrieve the BIOS of the console. I gra
 
 Once you start the emulator (no parameters), you have the option in the application settings to specify the "Content Location". Set it to where you have saved the CDI files. After saving, both CDI should appear. Start either to confirm that your emulator works.
 
-<img src="https://github.com/jglaurin/NSEC2020-Dreamcast/raw/master/images/emulator_rom.png">
+<img src="https://github.com/jglaurin/NSEC2020-Dreamcast/raw/master/images/emulator_config.png">
 
 ## Code Inspection with Ghidra
 Ghidra is a fantastic tool and fortunately know about the architecture of the Dreamcast. You can easily download the software of your computer and import the file. Run through the automatic analysis that it propose you and let it finish the analysis completely before you go further. On the left side, you should have a "Symbol Tree" window, filter for the function "_process_code". Note that I haven't used Ghidra to change the code as it makes other changes to the executables. Instead, I used HexEditor.
