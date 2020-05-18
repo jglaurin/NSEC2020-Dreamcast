@@ -86,6 +86,17 @@ Download BootDreams here (https://storage.googleapis.com/google-code-archive-dow
 
 Repeat this whole process for the second ROM. At the end, you should have two CDI files, transfer them to your Linux machine. It is just a matter of starting each ROM and press enter at the code entry to get the flag.
 
+<img src="https://github.com/jglaurin/NSEC2020-Dreamcast/raw/master/images/flags.png">
+
+## Bonus
+When testing my theory, I modified the r0 ROM to see if I could repackage it from the ELF. Instead of changing instructions, I changed the "Intruder detected" message when you do not provide the right code. This is easily achieved by searching with Hexeditor the string "InTr" and replacing the text by your own. 
+
+<img src="https://github.com/jglaurin/NSEC2020-Dreamcast/raw/master/images/modification_WHhere.png">
+
+I then repackaged the game and loaded it into Reicast for my own fun.
+
+<img src="https://github.com/jglaurin/NSEC2020-Dreamcast/raw/master/images/WHhere.png">
+
 ## Links
 https://dreamcast-talk.com/forum/viewtopic.php?f=52&t=8045&sid=158d552fb143100e581ae4fd70bd1ac7
 
