@@ -28,7 +28,11 @@ If you don’t have a Dreamcast handy, I recommend you play them with [this 4](h
 -   [light reading 3](https://www.st.com/content/ccc/resource/technical/document/user_manual/69/23/ed/be/9b/ed/44/da/CD00147165.pdf/files/CD00147165.pdf/jcr:content/translations/en.CD00147165.pdf)
 ## Introduction
 The challenge provide you with 5 files: two .CDI files, two .ELF files and a .PDF. This last file is the instruction documentation for the processor used in the Sega Dreamcast console. The two ELF files are the executables of the game with debug features enabled. The two CDI files are the actual CD images that can be used to play the game.
+
 When booting the game through an emulator, the first ROM ask you to enter a 6 numbers code in order to get the flag. The second ROM is similar, only here it ask you for a 5 numbers code. When you enter a wrong code, the game freeze with the mention Intrusion detected and you need to restart the emulator to try again. This mean that brute-forcing the code is not an option (10-15 seconds per try).
+
+<img src="https://github.com/jglaurin/NSEC2020-Dreamcast/raw/master/images/emulator_rom.png">
+
 ## Disclaimer
 I'm not a programmer or reverse engineer. I'm probably going to write something wrong or not understand concept well, nonetheless this is how I did it and understand the challenge.
 
@@ -40,6 +44,8 @@ The challenge provide you a link to the emulator Reicast (https://reicast.com/).
 Before you can start a game, you need to retrieve the BIOS of the console. I grab mine from https://replayers.org/bios-files/ and used the "DC - BIOS.bin" and DC - Flash.bin" files. Copy them to "~./.local/share/reicast/data" and rename "DC - BIOS.bin" to "dc_boot.bin" and "DC - Flash.bin" to "dc_flash.bin".
 
 Once you start the emulator (no parameters), you have the option in the application settings to specify the "Content Location". Set it to where you have saved the CDI files. After saving, both CDI should appear. Start either to confirm that your emulator works.
+
+<img src="https://github.com/jglaurin/NSEC2020-Dreamcast/raw/master/images/emulator_rom.png">
 
 ## Code Inspection with Ghidra
 Ghidra is a fantastic tool and fortunately know about the architecture of the Dreamcast. You can easily download the software of your computer and import the file. Run through the automatic analysis that it propose you and let it finish the analysis completely before you go further. On the left side, you should have a "Symbol Tree" window, filter for the function "_process_code". Note that I haven't used Ghidra to change the code as it makes other changes to the executables. Instead, I used HexEditor.
