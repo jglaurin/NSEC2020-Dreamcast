@@ -20,12 +20,12 @@ Write-up author: Joniel Gagné-Laurin (Wizard Hacker) - joniel {[(@)]} gagnelaur
 ## Challenge
 Riku, the new girl in grade 10 got her hands on some weird Japanese import games for the Dreamcast.
 The games want some sort of code, I can’t figure out how to beat them. Could you help me?
-If you don’t have a Dreamcast handy, I recommend you play them with [this 4](https://reicast.com/).
+If you don’t have a Dreamcast handy, I recommend you play them with [this](https://reicast.com/).
 -   [rom 0](https://github.com/jglaurin/NSEC2020-Dreamcast/raw/master/dc_rom_r0.elf_orig)
 -   [rom 0](https://github.com/jglaurin/NSEC2020-Dreamcast/raw/master/dc_rom_r0.cdi)
 -   [rom 1](https://github.com/jglaurin/NSEC2020-Dreamcast/raw/master/dc_rom_r1.elf_orig)
 -   [rom 1](https://github.com/jglaurin/NSEC2020-Dreamcast/raw/master/dc_rom_r1.cdi)
--   [light reading 3](https://github.com/jglaurin/NSEC2020-Dreamcast/raw/master/en.CD00147165.pdf)
+-   [light reading](https://github.com/jglaurin/NSEC2020-Dreamcast/raw/master/en.CD00147165.pdf)
 ## Introduction
 The challenge provide you with 5 files: two .CDI files, two .ELF files and a .PDF. This last file is the instruction documentation for the processor used in the Sega Dreamcast console. The two ELF files are the executables of the game with debug features enabled. The two CDI files are the actual CD images that can be used to play the game.
 
